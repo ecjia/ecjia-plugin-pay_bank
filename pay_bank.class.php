@@ -90,16 +90,12 @@ class pay_bank extends PaymentAbstract
      */
     public function unifiedOrder()
     {
-
-    }
-    
-    public function get_prepare_data() {
         $predata = array(
             'pay_code'     => $this->getCode(),
             'pay_name'     => $this->getDisplayName(),
-        	'pay_online'   => $this->config['bank_account_info'],
+            'pay_online'   => $this->config['bank_account_info'],
         );
-        
+
         return $predata;
     }
     
